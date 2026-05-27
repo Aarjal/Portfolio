@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aarjal — Creative Frontend Developer specializing in modern, interactive web experiences with HTML, CSS, and JavaScript.">
+  <meta name="keywords" content="frontend developer, web developer, portfolio, HTML, CSS, JavaScript, UI/UX">
+  <meta name="author" content="Aarjal">
+  <title>Aarjal | Frontend Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-logo">&lt;A/&gt;</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <p class="loader-text">Loading experience...</p>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">&lt;A/&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#timeline" class="nav-link" data-section="timeline">Journey</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for freelance work
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-greeting">Hello, I'm</span>
+        <span class="hero-name">Aarjal</span>
+        <span class="hero-role">I build <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span></span>
+      </h1>
+      <p class="hero-description">
+        A passionate frontend developer crafting pixel-perfect, interactive digital experiences 
+        that merge creativity with clean code and modern design principles.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <span>Contact Me</span>
+          <i class="fas fa-paper-plane"></i>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-count="15">0</span>+
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="2">0</span>+
+          <span class="stat-label">Years Exp.</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="10">0</span>+
+          <span class="stat-label">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <div class="mouse"><div class="wheel"></div></div>
+        <span>Scroll Down</span>
+      </div>
+    </div>
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">&lt;about&gt;</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <p class="section-subtitle">Get to know the developer behind the code</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <div class="about-image">
+            <div class="about-image-placeholder">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="about-image-border"></div>
+            <div class="about-image-dots"></div>
+          </div>
+        </div>
+        <div class="about-content">
+          <h3 class="about-heading">A creative developer who loves building beautiful web experiences</h3>
+          <p class="about-text">
+            I'm a frontend web developer with a deep passion for creating engaging, user-centered 
+            digital experiences. My journey in web development started with curiosity and quickly 
+            grew into a love for transforming designs into functional, responsive interfaces.
+          </p>
+          <p class="about-text">
+            I specialize in building modern websites using HTML, CSS, and JavaScript, with a keen 
+            eye for detail, smooth animations, and clean code architecture. I believe every pixel 
+            matters and every interaction should feel natural and delightful.
+          </p>
+          <div class="about-info-grid">
+            <div class="about-info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Nepal</span>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-envelope"></i>
+              <span>aarjal@email.com</span>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Self-taught Developer</span>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-briefcase"></i>
+              <span>Freelance & Open</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">
+            <span>Let's Talk</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">&lt;skills&gt;</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <p class="section-subtitle">Technologies & tools I work with</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card" data-skill="95">
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <h3>HTML5</h3>
+          <p>Semantic markup & accessibility</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+        </div>
+        <div class="skill-card" data-skill="90">
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <h3>CSS3</h3>
+          <p>Animations, Grid, Flexbox</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-card" data-skill="85">
+          <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+          <h3>JavaScript</h3>
+          <p>ES6+, DOM, async patterns</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-card" data-skill="88">
+          <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Responsive Design</h3>
+          <p>Mobile-first, fluid layouts</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-card" data-skill="80">
+          <div class="skill-icon"><i class="fas fa-pencil-ruler"></i></div>
+          <h3>UI/UX Basics</h3>
+          <p>Figma, wireframes, prototypes</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-card" data-skill="85">
+          <div class="skill-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+          <h3>Animations</h3>
+          <p>CSS & JS micro-interactions</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-card" data-skill="82">
+          <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+          <h3>Git & Tools</h3>
+          <p>Version control, npm, VS Code</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+        <div class="skill-card" data-skill="78">
+          <div class="skill-icon"><i class="fab fa-react"></i></div>
+          <h3>React Basics</h3>
+          <p>Components, hooks, state</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">&lt;projects&gt;</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <p class="section-subtitle">Some of my recent work</p>
+      </div>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Websites</button>
+        <button class="filter-btn" data-filter="app">Web Apps</button>
+        <button class="filter-btn" data-filter="ui">UI/UX</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-placeholder" style="--ph-hue: 250;">
+              <i class="fas fa-store"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="View demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>E-Commerce Landing Page</h3>
+            <p>A sleek, conversion-optimized landing page for a modern fashion brand with smooth animations.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="app">
+          <div class="project-image">
+            <div class="project-placeholder" style="--ph-hue: 170;">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="View demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Weather Dashboard</h3>
+            <p>Real-time weather application with dynamic backgrounds, geolocation, and 5-day forecasts.</p>
+            <div class="project-tech">
+              <span>JavaScript</span><span>API</span><span>CSS</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="ui">
+          <div class="project-image">
+            <div class="project-placeholder" style="--ph-hue: 320;">
+              <i class="fas fa-palette"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="View demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Portfolio Template</h3>
+            <p>A creative portfolio template with glassmorphism design, dark mode, and interactive elements.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="app">
+          <div class="project-image">
+            <div class="project-placeholder" style="--ph-hue: 30;">
+              <i class="fas fa-list-check"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="View demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Task Manager App</h3>
+            <p>Feature-rich task manager with drag-and-drop, categories, dark mode, and local storage.</p>
+            <div class="project-tech">
+              <span>JavaScript</span><span>CSS</span><span>HTML</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-placeholder" style="--ph-hue: 200;">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="View demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Restaurant Website</h3>
+            <p>Elegant restaurant website with menu showcase, reservation system, and parallax effects.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="ui">
+          <div class="project-image">
+            <div class="project-placeholder" style="--ph-hue: 140;">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="View demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Analytics Dashboard</h3>
+            <p>Modern analytics dashboard UI with charts, data visualization, and responsive grid layout.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>Chart.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">&lt;services&gt;</span>
+        <h2 class="section-title">What I <span class="accent">Offer</span></h2>
+        <p class="section-subtitle">Services tailored to bring your vision to life</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3>Frontend Development</h3>
+          <p>Building fast, responsive, and interactive websites using modern HTML, CSS, and JavaScript with clean, maintainable code.</p>
+          <div class="service-features">
+            <span><i class="fas fa-check"></i> Clean Code</span>
+            <span><i class="fas fa-check"></i> Performance</span>
+            <span><i class="fas fa-check"></i> SEO Ready</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-mobile-screen-button"></i></div>
+          <h3>Responsive Web Design</h3>
+          <p>Pixel-perfect designs that adapt seamlessly across all devices and screen sizes, ensuring a consistent user experience.</p>
+          <div class="service-features">
+            <span><i class="fas fa-check"></i> Mobile First</span>
+            <span><i class="fas fa-check"></i> Cross-browser</span>
+            <span><i class="fas fa-check"></i> Fluid Grids</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Landing Pages</h3>
+          <p>High-converting landing pages designed to capture attention, drive engagement, and convert visitors into customers.</p>
+          <div class="service-features">
+            <span><i class="fas fa-check"></i> Fast Loading</span>
+            <span><i class="fas fa-check"></i> CTA Focused</span>
+            <span><i class="fas fa-check"></i> A/B Ready</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-sparkles"></i></div>
+          <h3>Interactive UI</h3>
+          <p>Creating engaging micro-interactions, smooth animations, and dynamic user interfaces that leave a lasting impression.</p>
+          <div class="service-features">
+            <span><i class="fas fa-check"></i> Animations</span>
+            <span><i class="fas fa-check"></i> Transitions</span>
+            <span><i class="fas fa-check"></i> UX Focused</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="timeline section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">&lt;journey&gt;</span>
+        <h2 class="section-title">My <span class="accent">Journey</span></h2>
+        <p class="section-subtitle">Education, growth, and milestones</p>
+      </div>
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+        <div class="timeline-item" data-aos="left">
+          <div class="timeline-dot"><i class="fas fa-star"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2024 — Present</span>
+            <h3>Freelance Frontend Developer</h3>
+            <p>Working with clients worldwide to build modern, responsive websites and web applications. Delivering pixel-perfect designs with clean, optimized code.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="right">
+          <div class="timeline-dot"><i class="fas fa-trophy"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2024</span>
+            <h3>First Client Project Delivered</h3>
+            <p>Successfully completed my first freelance project — a responsive e-commerce landing page that increased client conversions by 40%.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="left">
+          <div class="timeline-dot"><i class="fas fa-code"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2023</span>
+            <h3>Deep Dive into JavaScript</h3>
+            <p>Mastered advanced JavaScript concepts including ES6+, async/await, API integrations, and began building complex interactive web applications.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="right">
+          <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2023</span>
+            <h3>Built 10+ Personal Projects</h3>
+            <p>Created a diverse portfolio of projects including dashboards, landing pages, and web apps to solidify skills and showcase capabilities.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="left">
+          <div class="timeline-dot"><i class="fas fa-rocket"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2022</span>
+            <h3>Started Web Development Journey</h3>
+            <p>Began learning HTML & CSS through online resources and tutorials. Built my first static websites and fell in love with creating for the web.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">&lt;contact&gt;</span>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <p class="section-subtitle">Have a project in mind? Let's build something amazing together</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let's talk about your project</h3>
+          <p>I'm always excited to work on new projects and collaborate with creative minds. Drop me a message and I'll get back to you within 24 hours.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:aarjal@email.com">aarjal@email.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <h4>Location</h4>
+                <span>Nepal</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h4>Availability</h4>
+                <span>Mon — Fri, 9am — 6pm NPT</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required placeholder=" ">
+            <label for="name">Your Name</label>
+            <span class="form-line"></span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required placeholder=" ">
+            <label for="email">Your Email</label>
+            <span class="form-line"></span>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" required placeholder=" ">
+            <label for="subject">Subject</label>
+            <span class="form-line"></span>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+            <label for="message">Your Message</label>
+            <span class="form-line"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo">&lt;A/&gt;</a>
+          <p>Crafting digital experiences with passion, precision, and modern web technologies.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="footer-social-links">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aarjal. All rights reserved.</p>
+        <p>Designed & Built with <span class="accent">&hearts;</span> and lots of coffee</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
