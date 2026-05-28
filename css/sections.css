@@ -35,6 +35,8 @@
 /* ===== About ===== */
 .about-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:72px; align-items:center; }
 .about-image { position:relative; width:100%; aspect-ratio:1; max-width:400px; margin:0 auto; }
+.about-img { width:100%; height:100%; object-fit:cover; border-radius:var(--radius); border:1px solid var(--border); backdrop-filter:blur(10px); transition:all var(--transition); }
+.about-image:hover .about-img { transform:scale(1.03); }
 .about-image-placeholder { width:100%; height:100%; background:var(--bg-glass); border:1px solid var(--border); border-radius:var(--radius); display:flex; align-items:center; justify-content:center; font-size:5rem; color:var(--accent); backdrop-filter:blur(10px); }
 .about-image-border { position:absolute; inset:-12px; border:2px solid var(--accent); border-radius:calc(var(--radius) + 4px); opacity:0.3; }
 .about-image-dots { position:absolute; bottom:-20px; right:-20px; width:80px; height:80px; background-image:radial-gradient(var(--accent) 1.5px,transparent 1.5px); background-size:12px 12px; opacity:0.3; }
