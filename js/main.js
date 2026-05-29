@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== TYPING ANIMATION =====
   const typedText = document.getElementById('typedText');
-  const words = ['Modern Websites', 'Clean Code', 'Responsive UIs', 'Dynamic Animations'];
+  const words = ['Full-Stack Development', '3D Web Experiences', 'Browser Extensions', 'Creative Interfaces'];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;

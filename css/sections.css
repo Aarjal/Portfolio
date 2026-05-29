@@ -34,7 +34,7 @@
 
 /* ===== About ===== */
 .about-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:72px; align-items:center; }
-.about-image { position:relative; width:100%; aspect-ratio:3/4; max-width:400px; margin:0 auto; }
+.about-image { position:relative; width:100%; aspect-ratio:703/807; max-width:400px; margin:0 auto; }
 .about-img { width:100%; height:100%; object-fit:cover; border-radius:var(--radius); border:1px solid var(--border); backdrop-filter:blur(10px); transition:all var(--transition); }
 .about-image:hover .about-img { transform:scale(1.03); }
 .about-image-placeholder { width:100%; height:100%; background:var(--bg-glass); border:1px solid var(--border); border-radius:var(--radius); display:flex; align-items:center; justify-content:center; font-size:5rem; color:var(--accent); backdrop-filter:blur(10px); }
